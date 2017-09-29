@@ -1,6 +1,5 @@
 @font-face {
     font-weight: bold;
-   // font-style: normal;
 
     font-family: 'Montserrat', sans-serif;
     src: url("../fonts/Montserrat-Bold.ttf") format("ttf");
@@ -44,30 +43,27 @@
     margin-left: 5px;
 
 }
-/* Portland */
 
-.place-weather-block:nth-child(4) span {
-    display: inline-block;
-
+.place-weather-block--m-top span {
     margin-top: 5px;
 }
 
-.place-weather-block:nth-child(1) {
+.place-weather-block--color-blue {
     background-color: #06b3db;
 }
-.place-weather-block:nth-child(2) {
+.place-weather-block--color-green {
     background-color: #4ed486;
 }
-.place-weather-block:nth-child(3) {
+.place-weather-block--color-dblue {
     background-color: #6139f6;
 }
-.place-weather-block:nth-child(4) {
+.place-weather-block--color-orange {
     background-color: #e3b63d;
 }
-.place-weather-block:nth-child(5) {
+.week-weather--color-maroon {
     background-color: #dc3d66;
 }
-.place-weather-block:nth-child(6) {
+.place-weather-block--color-purple {
     background-color: #bd54cd;
 }
 
@@ -79,11 +75,8 @@
 
     font-size: 12px;
 }
-/*
-.day-weather {
-    display: inline-block;
-}*/
-.day-weather img {
+
+.week__day-weather img {
     display: block;
     width: 23px;
     height: 23px;
@@ -99,7 +92,7 @@
     padding-top: 20px;
     background-color: #b33254;
 }
-.week-img-wrap {
+.week-weather--img-wrap {
     display: flex;
 
     box-sizing: border-box;
