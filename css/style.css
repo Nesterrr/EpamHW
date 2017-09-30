@@ -1,3 +1,9 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    font-size: 16px;
+}
 @font-face {
     font-weight: bold;
 
@@ -9,39 +15,39 @@
     display: flex;
 
     flex-wrap: wrap;
-    width: 613px;
-    margin: 0 auto;
-    
+
+    flex-shrink: 0;
+    overflow: hidden;
+
     color: #fff;
     text-transform: uppercase;
 
     font-family: "Montserrat";
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
 }
 
 .place-weather-block,
 .week-weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     box-sizing: border-box;
 
-    width: 204px;
-    height: 204px;
+    min-height: 160px;
     text-align:  center;
 }
 .place-weather-block img {
     display: block;
 
     margin: 0 auto;
-    margin-top: 45px;
+    margin-bottom: 20px;
 }
 .place-weather-block span {
-    display: inline-block;
-
     margin-top: 28px;
 }
-.place-weather-block span:nth-child(3) {
+.place-weather-block--cels-margin {
     margin-left: 5px;
-
 }
 
 .place-weather-block--m-top span {
@@ -73,7 +79,7 @@
     justify-content: center;
     background-color: #dc3d66;
 
-    font-size: 12px;
+    font-size: 0.8rem;
 }
 
 .week__day-weather img {
@@ -99,4 +105,61 @@
     flex-direction: column;
     justify-content: center;
     height: 102px;
+}
+.weather-widget--wrapper-cntr {
+    margin: 0 auto;
+}
+@media (max-width: 360px) {
+    .weather-widget {
+        width: 100%;
+        font-size: 0.8rem;
+    }
+    .place-weather-block,
+    .week-weather  {
+        width: 50%;
+        height: 160px;
+    }
+    .week-weather {
+        font-size: 0.6rem;
+    }
+    .place-weather-block img {
+        width: 50%;
+    }
+}
+@media (min-width: 361px) and (max-width: 407px) {
+    .weather-widget {
+        justify-content: center;
+        font-size: 0.8rem;
+    }
+    .place-weather-block,
+    .week-weather  {
+        width: 33%;
+    }
+    .week-weather {
+        font-size: 0.6rem;
+    }
+    .place-weather-block img {
+        width: 50%;
+    }
+}
+@media (min-width: 408px) and (max-width: 767px){
+    .weather-widget {
+        justify-content: center;
+    }
+    .place-weather-block,
+    .week-weather  {
+        width: 204px;
+        height: 204px;
+    }
+}
+@media (min-width: 768px) {
+    .weather-widget {
+        max-width: 612px;
+    }
+    .place-weather-block,
+    .week-weather  {
+        width: 204px;
+        height: 204px;
+    }
+
 }
