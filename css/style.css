@@ -73,9 +73,6 @@ body {
 }
 
 .week-weather {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     background-color: #dc3d66;
 
     font-size: 0.8rem;
