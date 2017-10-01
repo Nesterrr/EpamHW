@@ -12,11 +12,8 @@ body {
 }
 
 .weather-widget {
-    display: grid;
-    grid-template-columns: 204px 204px 204px;
-    justify-content: center;
     overflow: hidden;
-
+    width: 612px;
     color: #fff;
     text-transform: uppercase;
 
@@ -27,11 +24,11 @@ body {
 
 .place-weather-block,
 .week-weather {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     box-sizing: border-box;
+    float: left;
 
+    width: 204px;
+    height: 204px;
     min-height: 160px;
     text-align:  center;
 }
@@ -40,6 +37,10 @@ body {
 
     margin: 0 auto;
     margin-bottom: 20px;
+    margin-top: 45px;
+}
+.week-weather img {
+    margin-top: 20px;
 }
 .place-weather-block span {
     margin-top: 28px;
@@ -79,51 +80,56 @@ body {
 
     font-size: 0.8rem;
 }
+.week__day-weather {
+    float: left;
+    width: 25%;
 
+    margin-top: 25px;
+}
 .week__day-weather img {
     display: block;
     width: 23px;
     height: 23px;
+    margin: 0 auto;
 }
 .week {
-    display: flex;
     box-sizing: border-box;
-    justify-content: space-around;
+
     width: 100%;
 
     height: 102px;
 
-    padding-top: 20px;
     background-color: #b33254;
 }
 .week-weather--img-wrap {
-    display: flex;
 
     box-sizing: border-box;
-    flex-direction: column;
-    justify-content: center;
+
     height: 102px;
 }
 .weather-widget--wrapper-cntr {
     margin: 0 auto;
 }
 
-@media (min-width: 320px) and (max-width: 407px) {
+@media (min-width: 320px) and (max-width: 611px) {
     .weather-widget {
-        grid-template-columns: minmax(160px, 204px) minmax(160px, 204px);
+        width: 100%;
         font-size: 0.8rem;
     }
 
     .week-weather {
         font-size: 0.6rem;
     }
-    .place-weather-block img {
+    .place-weather-block,
+    .week-weather  {
+        box-sizing: border-box;
         width: 50%;
-    }
-}
-@media (min-width: 408px) and (max-width: 767px){
-    .weather-widget {
-        grid-template-columns: 204px 204px;
-    }
+        height: 200px;
 
+    }
+    .place-weather-block:nth-child(2n+1)  {
+        clear: left;
+    }
 }
+
+
